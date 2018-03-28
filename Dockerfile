@@ -15,7 +15,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
 
 RUN mkdir /root/.ssh/ && touch /root/.ssh/config && echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
 RUN echo "IdentityFile /root/.ssh/id_rsa" >> /etc/ssh/ssh_config
-RUN mkdir /root/.ssh/ && touch /root/.ssh/id_rsa
+RUN touch /root/.ssh/id_rsa
 RUN gem install bundler --no-ri --no-rdoc
 RUN npm install -g bower
 RUN npm install yarn
