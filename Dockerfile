@@ -13,8 +13,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && pip install awscli \
     && rm -f /tmp/get-pip.py
 
-RUN mkdir /root/.ssh/ && touch /root/.ssh/config && echo -e "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
+RUN mkdir /root/.ssh/ && touch /root/.ssh/config && echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
 RUN echo "IdentityFile /root/.ssh/id_rsa" >> /etc/ssh/ssh_config
 RUN gem install bundler --no-ri --no-rdoc
 RUN npm install -g yarn bower
-RUN ssh-agent
