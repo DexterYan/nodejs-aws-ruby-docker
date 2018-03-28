@@ -15,3 +15,4 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
 
 RUN mkdir ~/.ssh/ && touch ~/.ssh/known_hosts
 RUN gem install bundler --no-ri --no-rdoc
+RUN npm install -g yarn bower
