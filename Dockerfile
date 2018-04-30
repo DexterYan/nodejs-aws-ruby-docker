@@ -17,5 +17,5 @@ RUN mkdir /root/.ssh/ && touch /root/.ssh/config && echo "StrictHostKeyChecking 
 RUN echo "IdentityFile /root/.ssh/id_rsa" >> /etc/ssh/ssh_config
 RUN touch /root/.ssh/id_rsa
 RUN gem install bundler --no-ri --no-rdoc
-RUN npm install -g bower
+RUN npm install -g bower grunt
 RUN npm install yarn
